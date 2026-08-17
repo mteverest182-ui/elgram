@@ -5,7 +5,7 @@ import LoginView from "./views/LoginView";
 import RegisterView from "./views/RegisterView";
 import AuthLayout from "./layout/AuthLayout";
 import HomeLayout from "./layout/HomeLayout";
-import CreateFeedView from "./views/createFeedView";
+import CreateFeedView from "./views/CreateFeedView";
 import UpdateUserView from "./views/UpdateUserView";
 import SearchView from "./views/SearchView";
 
