@@ -10,14 +10,12 @@ const BtnFollow = ({ selectedUser }) => {
 
   const isFollowUser = async () => {
     setLoading(true);
-
     try {
       const { data } = await customAPI.get(`/follow/${selectedUser.id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
-
       setIsFollow(data.data);
     } catch (error) {
       console.log(error);
@@ -66,7 +64,9 @@ const BtnFollow = ({ selectedUser }) => {
   };
 
   useEffect(() => {
-    isFollowUser();
+    if (selectedUser?.id) {
+      isFollowUser();
+    }
   }, []);
 
   return (
